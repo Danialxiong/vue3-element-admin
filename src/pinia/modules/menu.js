@@ -14,6 +14,7 @@ import { fixedRoutes, asyncRoutes } from '@/router'
 import { GetMenus } from '@/api/menu'
 import router from '@/router'
 import { ref } from 'vue'
+import menu from '@/i18n/locales/en/menu'
 
 export const useMenus = defineStore('menu', () => {
   const generateUrl = (path, parentPath) => {
@@ -78,7 +79,7 @@ export const useMenus = defineStore('menu', () => {
   const generateMenus = async () => {
     // // 方式一：只有固定菜单
     // const menus = getFilterMenus(fixedRoutes)
-    // commit('SET_MENUS', menus)
+    // setMenus(menus)
 
     // 方式二：有动态菜单
     // 从后台获取菜单
